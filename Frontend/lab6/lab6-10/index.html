@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="../assets/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/lab6-10.js"></script>	
+</head>
+<body>	
+	<form action="">
+	<fieldset>
+		<legend>Información General</legend>
+		<div>
+		<span class="label">Nombres y apellidos</span>
+		<input type="text" class="infobox" name="nombre" placeholder="Ingrese su nombre y apellido"/>
+		</div>
+
+		<div>
+		<span class="label">Email</span>
+		<input type="text" class="infobox" name="email"  placeholder="Ingrese su email"/>
+		</div>
+
+		<div>
+		<span class="label">Password</span>
+		<input type="password" name="password" class="password" placeholder="Ingrese su password"/><br/>		
+		</div>
+
+		<div>
+		<span class="label">Confirmar password</span>
+		<input type="password" name="confpass" class="confpass" placeholder="Confirme su password"/>		
+		</div>
+
+		<div>
+			<span class="label">Seleccione el tipo de comida</span>		<br/><br/>
+		<input type="checkbox" id="pizza" name="pizza" value="5000" class="infobox"/>Pizza $5000<br/>
+		<input type="checkbox" id="cocaCola" name="cocaCola" value="2000" class="infobox"/>Coca-Cola $2000<br/>
+		<input type="checkbox" id="hotDog" name="hotDog" value="5000" class="infobox"/>HotDog $5000<br/>
+		<input type="checkbox" id="papasFritas" name="papasFritas" value="3000" class="infobox"/>Papas fritas $3000<br/><br/>
+		</div>
+
+		<div>
+			<span class="label">Seleccione un tipo de pago</span><br/><br/>
+		<input type="radio" name="paymode" class="radio" value="MasterCard"/>Master Card<br/>
+		<input type="radio" name="paymode" class="radio" value="ANXCard"/>ANX Card<br/>
+		<input type="radio" name="paymode" class="radio" value="VisaCard"/>Visa Card<br/><br/>
+		<p class="errorRadio"></p>
+		</div>
+
+		<div>
+			<span class="label">Seleccione una ciudad</span>
+		<select name="city" id="city" class="infobox" >
+			<option value="0">Seleccione una ciudad</option>
+			<option value="bog">Bogotá</option>
+			<option value="med">Medellin</option>
+			<option value="barr">Barranquilla</option>
+			<option value="cali">Cali</option>
+		</select>
+		</div>
+
+		<p class="error"></p>
+		<p class="result"></p>
+		<button class="button">Enviar</button>
+		
+	</fieldset>		
+	</form>
+</body>
+</html>
