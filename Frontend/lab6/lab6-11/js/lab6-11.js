@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 		if(validate.userid(data)){
 			$('#nid').next().hide();	
-			$('#nid-error').next().hide();
+			$('.nid-error').next().hide();
 			localStorage.setItem('nid', data);		
 		}
 		else{
@@ -91,8 +91,7 @@ $(document).ready(function(){
 		}
 		else{
 			$('.password').next().hide();
-			$('.password-error').next().hide();
-			localStorage.setItem('password', data);
+			$('.password-error').next().hide();			
 		}
 
 		var confData = $('.conf-password').val();
@@ -113,8 +112,9 @@ $(document).ready(function(){
 				$('.conf-password-error').text('La contraseña no es igual');
 			}
 			else{
-				$('.conf-password').next().hide();
+				$('.conf-password').next().show();
 				$('.conf-password-error').hide();
+				localStorage.setItem('password', data);
 			}
 		}
 
@@ -126,7 +126,7 @@ $(document).ready(function(){
 			localStorage.setItem('email', data);
 		}
 		else{
-			$('.emailadd').next().hide();
+			$('.emailadd').next().show();
 			$('.email-error').next().show();
 			$('.email-error').text('El email es incorrecto');
 		}
@@ -181,7 +181,7 @@ $(document).ready(function(){
 			localStorage.setItem('city', count);
 
 			$('#buttons').append(
-				'<a id="info" href="#appendModal"> Ver detalle del pedido</a> '
+				'<a id="info" href="#openModal"> Ver detalle del pedido</a> '
 			);
 
 			$('.inputs').removeClass('error');
@@ -192,7 +192,8 @@ $(document).ready(function(){
 	});
 
 $(document).on('click', '#info', function(){
-	$('appendModal > div').append(
+	
+	$('#openModal > div').append(
 		'<h2>Detalle del pedido</h2>' +
 		'<ul>' + 
 		'<li> Su documento de identidad es: ' + localStorage.getItem('nid') + '</li>' +
@@ -206,7 +207,7 @@ $(document).on('click', '#info', function(){
 	var meals = JSON.parse(localStorage.getItem('meals'));
 
 	$.each(meals, function(key, value){
-		$('#listMeals > ul').append('<li> El producto ' + key + 'cuesta $' + value + 'M/Cte</li>');
+		$('#listMeals > ul').append('<li> El producto ' + key + ' cuesta $' + value + 'M/Cte</li>');
 	});
 });
 });
