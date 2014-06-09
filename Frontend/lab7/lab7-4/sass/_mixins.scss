@@ -1,0 +1,32 @@
+@mixin border-box(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin translate($percentage:0){
+	-webkit-transform: translateX($percentage); 
+	-moz-transform: translateX($percentage);
+	-ms-transform: translateX($percentage);
+	-o-transform: translateX($percentage);
+	transform: translateX($percentage);
+}
+
+@mixin shadow ($param1:0, $param2:0, $param3:0, $param4:0){
+	-webkit-box-shadow: 0 1px 3px 0 rgba($param1,$param2,$param3,$param4);
+	-moz-box-shadow: 0 1px 3px 0 rgba($param1,$param2,$param3,$param4);
+	box-shadow: 0 1px 3px 0 rgba($param1,$param2,$param3,$param4);
+}
+
+@mixin border_radius($param1:0){
+	-webkit-border-radius: $param1;
+	-moz-border-radius: $param1;
+	border-radius: $param1;
+}
+
+@mixin transition($param1:0){
+	-webkit-transition: all $param1;
+	-moz-transition: all $param1;
+	-o-transition: all $param1;
+	transition: all $param1;
+}

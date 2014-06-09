@@ -1,0 +1,47 @@
+@import "_variables";
+
+body{
+	background : $color_white;
+	color: $color_font;
+	width: $pages_width;
+
+	.color{
+		h1{
+		//saturar el color; función específica de sass
+			color: saturate($color_font, 25%);
+			font-size: $font_size_h1;
+		}
+
+		h2{
+			//función de escalar un color a grises de sass
+			color: grayscale($color_red);
+			font-size: $font_size_h2;
+		}
+
+		h3{
+			//variación de la función escalar a grises de sass
+			color: desaturate($color_green, 100%);
+			font-size: $font_size_h3;
+		}
+
+		h4{
+			//función mix, para mezclar dos colores, en este caso una escala a grises de la variable $color_green con $color_red
+			color: mix(desaturate($color_green, 100%), $color_red);
+			font-size: $font_size_h4;
+		}
+
+		h5{
+			//mezcla de colores de manera normal entre $color_white y #333
+			color: mix($color_white, #333);
+			font-size: $font_size_h5;
+		}
+
+		h6{
+			color: lighten(#555, 63%);
+			font-size: $font_size_h6;
+		}
+
+	}
+
+	
+}

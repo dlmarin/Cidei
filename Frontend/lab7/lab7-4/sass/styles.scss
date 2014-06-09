@@ -1,0 +1,204 @@
+@import "_reset";
+@import "_variables";
+@import "_mixins";
+
+
+* {
+	@include border-box();
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: $color_h;
+	font-family: $font_family_h;
+	font-weight: $font_weight_h;
+}
+
+/* Header */
+
+.header{
+	background-color: $background-color;
+	border-bottom: $border_bottom;
+	@include shadow(0,0,0,0.3);	
+	padding: $padding;
+}
+
+.logo{
+	background-color: $background_color_logo;
+	@include border_radius(3px);
+	margin: $margin;
+	padding: $padding_logo;
+	text-align: $text-align;
+	width: $width;
+}
+
+.logo h1{
+	color: $color;
+	font-weight: $font-weight;
+	font-family: $font-family;
+	margin-bottom: $margin-bottom;
+}
+
+/* Navigation */
+
+.nav-menu,
+.portafolio > figure.columns{
+	display: $display;
+}
+
+label{
+	color: $background-color;
+	cursor: $cursor;
+	display: $display_label;
+	padding: $padding_label;
+}
+
+.nav-menu:checked + label{
+	color: $color;
+	background-color: $background-color; 
+	@include border_radius(3px);
+}
+
+#all:checked ~ .portafolio .all,
+#develop:checked ~ .portafolio .poster,
+#test:checked ~ .portafolio .illustration,
+#languages:checked ~ .portafolio .typography,
+#skills:checked ~ .portafolio .package{
+	display: $display_varios;
+}
+
+/* Portafolio*/
+
+.portafolio{
+	margin-top: $margin-top;
+}
+
+.portafolio .four.columns{
+	margin-left: $margin-bottom;
+	margin-right: $margin-bottom;
+	width: $width_portafolio;
+}
+
+.portafolio > figure{
+	position: $position;
+	overflow: $overflow;
+}
+
+.portafolio > figure img{
+	display: $display_varios;
+	max-width: $max-width;
+}
+
+.portafolio figcaption{
+	position: $position_portafolio;
+	height: $max-width;
+	left: $margin-bottom;
+	top: $margin-bottom;
+	width: $max-width;
+	background-color: $background-color-portafolio;
+	padding: $padding-portafolio;
+
+	@include translate(100%);
+
+	@include transition(350ms);
+}
+
+.portafolio figcaption h4{
+	color: $color;
+}
+
+.portafolio figcaption p{
+	color: $color;
+	font-size: $font-size;
+}
+
+.portafolio > figure:hover figcaption{
+	@include translate(0);
+}
+
+/*Footer section*/
+
+.footer{
+	border-top: $border-top;
+	margin-top: $margin-top-footer;
+	padding: $paddingfooter;
+}
+
+
+
+/**/
+@media only screen and (max-width: 959px){
+	label{
+		display: $display;
+	}
+
+	.container{
+		width: $max-width;
+	}
+
+	.portafolio .four.columns{
+		width: $width-p;
+	}
+
+	.portafolio .all{
+		margin-bottom: $margin-bottom-p;
+	}
+
+	.portafolio > figure:before{
+		content: $content;
+		font-size: $font-size-p;
+		padding: $padding-p;
+		width: $max-width;
+		color: $color;
+		display: $display_varios;
+		font-weight: $font_weight_h;
+		text-transform: $text-transform;
+		background-color: $background-color-p;
+		position: $position_portafolio;
+	}
+
+	.portafolio figcaption{
+		position: $position;
+		opacity: $opacity;
+
+		@include translate(0%);		
+
+		background-color: $background-color;
+	}
+
+	.portafolio figure:nth-child(odd) figcaption{
+		background-color: $background-color-p-f;
+	}
+
+	.footer{
+		border-top: $border-top;
+		margin-top: $margin-top-f;
+		padding:$margin-top-footer;
+	}
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 959px){
+
+}
+
+/* landscape*/
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.portafolio .four.columns{
+		width: $width-only;
+	}
+}
+
+/* mobile portrait size*/
+@media only screen and (max-width: 479px){
+	.container{
+		width: $max-width;
+	}
+
+	.portafolio .four.columns{
+		width: 1$max-width;
+	}
+
+	.footer{
+		text-align: $text-align;
+	}
+}

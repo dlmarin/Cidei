@@ -1,10 +1,11 @@
 form{
-	width: 300px;
+	width: 500px;
 	margin: 20px auto;
 }
 
 input{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #848484;
+	font-family: "Calibri", Helvetica, Arial, sans-serif;
 	border: 1px solid #ccc;
 	font-size: 20px;
 	width: 300px;
@@ -20,21 +21,36 @@ input{
 	border-radius: 5px;
 }
 
-input[type=submit]{
-	background: none;
-	padding: 10px;
+.comida{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+
+.pago{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
 }
 
 .label{
+	color: #0B0B3B;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
 	float: left;
 	width: 120px;
 }
 
 .infobox{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
 	width: 200px;
 }
 
-.error{
+.error, .errorComida, .errorNombre, .errorTarjeta, .errorCity, .password-error, .conf-password-error{
 	color: red;
 	padding-left: 10px;
+}
+
+.button{
+	background-color: #FACC2E;
+	padding: 10px;
+	color: black;
 }

@@ -10,7 +10,7 @@ $(document).ready(function(){
 			var pattern = new RegExp(/^[0-9]+$/);
 			return pattern.test(uid);
 		}
-	}
+	}	
 
 	$('#nid').focus(function(){
 		$(this).addClass('inputs');
@@ -52,6 +52,8 @@ $(document).ready(function(){
 	$('#buttons #info').remove();
 
 	$('.button').bind('click', function(event){
+		$('#info').remove();
+
 		var validate = new Validate();
 
 		var data = $('#nid').val();
@@ -179,20 +181,19 @@ $(document).ready(function(){
 		else{
 			$('.city-error').hide();
 			localStorage.setItem('city', count);
-
+			
 			$('#buttons').append(
-				'<a id="info" href="#openModal"> Ver detalle del pedido</a> '
+				'<a id="info" href="#openModal"> Ver detalle del pedido</a> '			
 			);
 
 			$('.inputs').removeClass('error');
-			$('.inputs').addClass('success');
+			$('.inputs').addClass('success');			
 		}
-		event.preventDefault();
+		event.preventDefault();		
 
 	});
 
-$(document).on('click', '#info', function(){
-	
+$(document).on('click', '#info', function(){	
 	$('#openModal > div').append(
 		'<h2>Detalle del pedido</h2>' +
 		'<ul>' + 
@@ -202,12 +203,13 @@ $(document).on('click', '#info', function(){
 		'<li id="listMeals"> Los alimentos que solicita son: ' + '<ul></ul></li>' +
 		'<li> El modo de pago es: ' + localStorage.getItem('paymode') + '</li>' +
 		'<li> La ciudad donde vive es: ' + localStorage.getItem('city') + '</li></ul>'
-		);
+		);		
 
-	var meals = JSON.parse(localStorage.getItem('meals'));
+		var meals = JSON.parse(localStorage.getItem('meals'));
 
 	$.each(meals, function(key, value){
 		$('#listMeals > ul').append('<li> El producto ' + key + ' cuesta $' + value + 'M/Cte</li>');
-	});
+	});	
 });
+
 });

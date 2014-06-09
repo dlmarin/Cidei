@@ -1,0 +1,52 @@
+/* line 4, ../sass/styles.scss */
+body {
+  background: white;
+  color: #333333;
+  width: 960px;
+}
+/* line 10, ../sass/styles.scss */
+body .color h1 {
+  color: #402626;
+  font-size: 24px;
+}
+/* line 16, ../sass/styles.scss */
+body .color h2 {
+  color: gray;
+  font-size: 12px;
+}
+/* line 22, ../sass/styles.scss */
+body .color h3 {
+  color: #404040;
+  font-size: 8px;
+}
+/* line 28, ../sass/styles.scss */
+body .color h4 {
+  color: #9f2020;
+  font-size: 6px;
+}
+/* line 34, ../sass/styles.scss */
+body .color h5 {
+  color: #999999;
+  font-size: 4.8px;
+}
+/* line 40, ../sass/styles.scss */
+body .color h6 {
+  color: #f6f6f6;
+  font-size: 4px;
+}
+/* line 46, ../sass/styles.scss */
+body header {
+  -webkit-border-radius: 2px 4px;
+  -khtml-border-radius: 2px 4px;
+  -moz-border-radius: 2px 4px;
+  -o-border-radius: 2px 4px;
+  border-radius: 2px 4px;
+}
+/* line 50, ../sass/styles.scss */
+body #container {
+  -webkit-border-radius: 3px 4px;
+  -khtml-border-radius: 3px 4px;
+  -moz-border-radius: 3px 4px;
+  -o-border-radius: 3px 4px;
+  border-radius: 3px 4px;
+}
