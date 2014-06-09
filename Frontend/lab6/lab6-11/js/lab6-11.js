@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	localStorage.clear();
 	function Validate(){};
 
 	Validate.prototype = {
@@ -52,7 +53,11 @@ $(document).ready(function(){
 	$('#buttons #info').remove();
 
 	$('.button').bind('click', function(event){
-		$('#info').remove();
+
+		if($('#info')){
+			$('#openModal > div').empty();
+			$('#info').remove();
+		}		
 
 		var validate = new Validate();
 
@@ -202,7 +207,8 @@ $(document).on('click', '#info', function(){
 		'<li> Su email es: ' + localStorage.getItem('email') + '</li>' +
 		'<li id="listMeals"> Los alimentos que solicita son: ' + '<ul></ul></li>' +
 		'<li> El modo de pago es: ' + localStorage.getItem('paymode') + '</li>' +
-		'<li> La ciudad donde vive es: ' + localStorage.getItem('city') + '</li></ul>'
+		'<li> La ciudad donde vive es: ' + localStorage.getItem('city') + '</li></ul>'+
+		'<a href="#close" title="Close" class="close">X</a>'
 		);		
 
 		var meals = JSON.parse(localStorage.getItem('meals'));
