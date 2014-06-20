@@ -1,0 +1,22 @@
+body {
+  background: white;
+  color: #333333;
+  width: 960px; }
+  body .color h1 {
+    color: #402626;
+    font-size: 24px; }
+  body .color h2 {
+    color: gray;
+    font-size: 12px; }
+  body .color h3 {
+    color: #404040;
+    font-size: 8px; }
+  body .color h4 {
+    color: #9f2020;
+    font-size: 6px; }
+  body .color h5 {
+    color: #999999;
+    font-size: 4.8px; }
+  body .color h6 {
+    color: #f6f6f6;
+    font-size: 4px; }

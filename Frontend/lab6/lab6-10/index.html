@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="../assets/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/lab6-10.js"></script>	
+</head>
+<body>	
+	<form >
+	<fieldset>
+		<legend>Información General</legend>
+		<div>
+		<span class="label">Nombres y apellidos</span>
+		<input id="nombre" type="text" class="nombre" name="nombre" placeholder="Ingrese su nombre y apellido"/>
+		<p class="errorNombre"></p>
+		</div>
+
+		<div>
+		<span class="label">Email</span>
+		<input type="text" class="email" name="email"  placeholder="Ingrese su email"/>
+		<p class="error"></p>
+		</div>
+
+		<div>
+		<span class="label">Password</span>
+		<input type="password" name="password" class="password" placeholder="Ingrese su password"/>	
+		<p class="password-error"></p>	
+		</div>
+
+		<div>
+		<span class="label">Confirmar password</span>
+		<input type="password" name="confpass" class="confpass" placeholder="Confirme su password"/>	
+		<p class="conf-password-error"></p>	<br/>
+		</div>
+
+		<div class="comida">
+			<span class="label">Seleccione el tipo de comida</span>		<br/><br/>
+		<input type="checkbox" id="pizza" name="pizza" value="5000" class="checkbox"/>Pizza $5000<br/>
+		<input type="checkbox" id="cocaCola" name="cocaCola" value="2000" class="checkbox"/>Coca-Cola $2000<br/>
+		<input type="checkbox" id="hotDog" name="hotDog" value="5000" class="checkbox"/>HotDog $5000<br/>
+		<input type="checkbox" id="papasFritas" name="papasFritas" value="3000" class="checkbox"/>Papas fritas $3000<br/><br/>		
+		</div>
+		<p class="errorComida"></p>
+		<p class="resultComida"></p>
+
+		<div class="pago">
+			<span class="label">Seleccione un tipo de pago</span><br/><br/>
+		<input type="radio" name="paymode" class="radio" value="MasterCard"/>Master Card<br/>
+		<input type="radio" name="paymode" class="radio" value="ANXCard"/>ANX Card<br/>
+		<input type="radio" name="paymode" class="radio" value="VisaCard"/>Visa Card<br/><br/>		
+		</div>
+		<p class="errorTarjeta"></p>
+
+		<div>
+			<span class="label">Seleccione una ciudad</span>
+		<select name="city" id="city" class="infobox" >
+			<option value="0">Seleccione una ciudad</option>
+			<option value="Bogotá">Bogotá</option>
+			<option value="Medellin">Medellin</option>
+			<option value="Barranquilla">Barranquilla</option>
+			<option value="Cali">Cali</option><br/>
+		</select>		
+		</div>
+		<p class="errorCity"></p><br/>
+
+		<p class="result1"></p>
+		<p class="result2"></p>
+		<p class="result3"></p>
+		<p class="result4"></p>
+		<p class="result5"></p><br/>
+		<button class="button">Enviar</button>
+		
+	</fieldset>		
+	</form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+form{
+	width: 500px;
+	margin: 20px auto;
+}
+
+input{
+	color: #848484;
+	font-family: "Calibri", Helvetica, Arial, sans-serif;
+	border: 1px solid #ccc;
+	font-size: 20px;
+	width: 300px;
+	min-height: 30px;
+	display: block;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	outline: none;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.comida{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+
+.pago{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+
+.label{
+	color: #0B0B3B;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+	float: left;
+	width: 120px;
+}
+
+.infobox{
+	color: #642EFE;
+	font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+	width: 200px;
+}
+
+.error, .errorComida, .errorNombre, .errorTarjeta, .errorCity, .password-error, .conf-password-error{
+	color: red;
+	padding-left: 10px;
+}
+
+.button{
+	background-color: #FACC2E;
+	padding: 10px;
+	color: black;
+}
