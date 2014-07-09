@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> {{ title }} </title>
+	</head>
+	<body>
+		<h1>Detalle Categoria</h1>
+		<a href="{% url 'edit-category' categorias.slug %}">Editar categoria</a>
+		<ul>
+			<li>Nombre: {{ categorias.name }}</li>
+			<li>Slug: {{ categorias.slug }}</li>
+		</ul>	
+		<a href="{% url 'index' %}">Inicio</a>	
+		<a href="{% url 'categorias' %}">Lista categorias</a>	
+	</body>
+</html>
