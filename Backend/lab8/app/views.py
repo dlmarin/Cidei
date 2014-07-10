@@ -9,6 +9,8 @@ from django.core.serializers import serialize
 import json
 
 from django.contrib.auth.decorators import login_required
+from app.serializers import CategorySerializer
+from rest_framework import viewsets
 
 # Create your views here.
 """def index(request):
@@ -134,3 +136,7 @@ def ajax_items(request):
 		return HttpResponse(items, content_type='application/json')
 	else:
 		return HttpResponse({'error':'Hubo un error'}, content_type='application/json')
+
+class CategoryViewSet(viewsets.ModelViewSet):
+	queryset = Category.objects.all()
+	serializer_class = CategorySerializer

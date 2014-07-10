@@ -5,6 +5,8 @@ from accounts.models import UserProfile
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from accounts.forms import UserForm, UserProfileForm
+from accounts.serializers import UserProfileSerializer, UserSerializer
+from rest_framework import viewsets
 
 # Create your views here.
 def register(request):
@@ -63,3 +65,11 @@ def user_login(request):
 
 	else:
 		return render_to_response('accounts/login.html', {}, context_instance=RequestContext(request))
+
+class UserViewSet(viewsets.ModelViewSet):
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+	queryset = UserProfile.objects.all()
+	serializer_class = UserProfileSerializer

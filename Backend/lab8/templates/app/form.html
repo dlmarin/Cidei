@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> {{ title }} </title>
+	</head>
+	<body>
+		<form action="." method="POST">
+			{% csrf_token %}
+			<!-- Se puede crear como una tabla con as_table, como un parrafo as_p o como una lista as_ul-->
+			{{ form.as_p }}
+
+			<input type="submit" value="Enviar">
+
+		</form>
+	</body>
+</html>

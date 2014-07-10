@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'autofixture',
     'south',
+    'rest_framework',
     'app',
     'accounts',
 )

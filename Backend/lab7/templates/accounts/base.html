@@ -7,15 +7,10 @@
 		<script src="{% static "js/jquery.cookie.js" %}"></script>
 		<script src="{% static "js/lab6.js" %}"></script>
 
+		{# Bloque de codigo para extender #}
+		{% block extrahead %}{% endblock %}
 	</head>
 	<body>
-		<h1>{{ title }}</h1>
-		<ul>		
-			<li><a href="items">Items</a></li>		
-			<li><a href="categories">Categorias</a></li>
-			<li><a href="about">About</a></li>
-			<li><a href="items/add/">Adicionar item</a></li>
-			<li><a href="{% url 'add-category' %}">Adicionar categoria</a></li>
-		</ul>
+		{% block body %}{% endblock %}
 	</body>
 </html>
